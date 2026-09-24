@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - DynastyDex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">DYNASTYDEX</div>
+        <a href="index.html" class="btn-close">MENU</a>
+    </div>
+
+    <!-- MAIN GRID VIEW -->
+    <div id="wiki-main">
+        <div class="wiki-header">
+            <div class="filters">
+                <div class="filter-group">
+                    <label>NAME</label>
+                    <input type="text" id="search-name" placeholder="Search by name">
+                </div>
+                <div class="filter-group">
+                    <label>GROUP</label>
+                    <select id="search-group">
+                        <option value="Any">Any</option>
+                        <option value="Heavenly">Heavenly</option>
+                        <option value="Mythical">Mythical</option>
+                        <option value="Legendary">Legendary</option>
+                        <option value="Epic">Epic</option>
+                        <option value="Rare">Rare</option>
+                        <option value="Common">Common</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-buttons">
+                <button class="btn-apply" onclick="applyFilters()">Apply</button>
+                <button class="btn-clear" onclick="clearFilters()">Clear</button>
+            </div>
+        </div>
+
+        <div class="wiki-grid" id="ball-container">
+
+            <!-- HEAVENLY (Arcoíris) -->
+            <div class="ball-card" 
+                data-name="Greater Ottoman Empire" 
+                data-group="Heavenly"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Ottoman+Card"
+                data-spawn-img="https://i.postimg.cc/P5LGT1VR/173-sin-titulo-20260904164751.png" 
+                data-spawn-artist="zetahatcat" 
+                data-card-artist="kyrgeta"
+                data-regime="Sultanate" 
+                data-hp="3050" 
+                data-atk="1820" 
+                data-ability="Ottoman Might! Boosts attack stats by +25%."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/BQm4Bxzv/173-sin-titulo-20260904164751.png" alt="Greater Ottoman Empire">
+                </div>
+                <div class="ball-name">Greater Ottoman Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">zetahatcat</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">kyrgeta</span></div>
+                </div>
+            </div>
+
+            <!-- MYTHICAL (Morado) -->
+            <div class="ball-card" 
+                data-name="Roman Empire" 
+                data-group="Mythical"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Roman+Card"
+                data-spawn-img="https://i.postimg.cc/Px4ZHbnH/imagen-2026-08-12-065904254.png" 
+                data-spawn-artist="zetahatcat" 
+                data-card-artist="ArtistName"
+                data-regime="Monarchy" 
+                data-hp="3000" 
+                data-atk="1800" 
+                data-ability="Pax Romana! Fortifies legionary ranks for a +20% HP boost."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/Px4ZHbnH/imagen-2026-08-12-065904254.png" alt="Roman Empire">
+                </div>
+                <div class="ball-name">Roman Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">zetahatcat</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">ArtistName</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="British Empire" 
+                data-group="Mythical"
+                data-card-img="https://i.postimg.cc/yxqkBFH0/imagen-2026-09-10-094304599.png"
+                data-spawn-img="https://i.postimg.cc/SsDX3ycX/imagen-2026-08-12-065953935.png" 
+                data-spawn-artist="Tealand" 
+                data-card-artist="ArtistName"
+                data-regime="Monarchy" 
+                data-hp="3000" 
+                data-atk="1800" 
+                data-ability="Rule Britannia Gains an aggressive +20% attack bonus when fighting oceanic or island territories, while slightly improving team turn speed."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/SsDX3ycX/imagen-2026-08-12-065953935.png" alt="British Empire">
+                </div>
+                <div class="ball-name">British Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">zetahatcat</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">ArtistName</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Mongol Empire" 
+                data-group="Mythical"
+                data-card-img="https://i.postimg.cc/yxqkBFH0/imagen-2026-09-10-094304599.png"
+                data-spawn-img="https://i.postimg.cc/GhQXhYdn/imagen-2026-08-12-072520610.png" 
+                data-spawn-artist=".nintendoswitchlite." 
+                data-card-artist="ArtistName"
+                data-regime="Mongol Khanate" 
+                data-hp="2990" 
+                data-atk="1785" 
+                data-ability="Nomadic Horde Launches an aggressive cavalry sweep right at the start of battle, dealing +25% extra damage on the first round."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/GhQXhYdn/imagen-2026-08-12-072520610.png" alt="Mongol Empire">
+                </div>
+                <div class="ball-name">Mongol Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">zetahatcat</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">ArtistName</span></div>
+                </div>
+            </div>
+
+            <!-- LEGENDARY (Amarillo) -->
+            <div class="ball-card" 
+                data-name="Umayyad Caliphate" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/FRWBTdzy/imagen-2026-09-10-173743172.png" 
+                data-spawn-artist="zetahatcat" 
+                data-card-artist="zetahatcat"
+                data-regime="Caliphate" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/FRWBTdzy/imagen-2026-09-10-173743172.png" alt="Umayyad Caliphate">
+                </div>
+                <div class="ball-name">Umayyad Caliphate</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">peligrosamente</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Tang Dynasty" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/138DhNzy/imagen-2026-08-12-072733310.png" 
+                data-spawn-artist="zetahatcat" 
+                data-card-artist="zetahatcat"
+                data-regime="Caliphate" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/138DhNzy/imagen-2026-08-12-072733310.png" alt="Tang Dynasty">
+                </div>
+                <div class="ball-name">Tang Dynasty</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">zetahatcat</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Qin Dynasty" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/NFN2Zgqz/imagen-2026-08-12-072826511.png" 
+                data-spawn-artist="cirno9715" 
+                data-card-artist="cirno9715"
+                data-regime="Chinese Dynasty" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/NFN2Zgqz/imagen-2026-08-12-072826511.png" alt="Qin Dynasty">
+                </div>
+                <div class="ball-name">Qin Dynasty</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">cirno9715</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">cirno9715</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Spanish Empire" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/G2dB2Bb8/imagen-2026-08-12-072920704.png" 
+                data-spawn-artist="alytzia" 
+                data-card-artist="none"
+                data-regime="Monarchy" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/G2dB2Bb8/imagen-2026-08-12-072920704.png" alt="Spanish Empire">
+                </div>
+                <div class="ball-name">Spanish Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">peligrosamente</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Russian Empire" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/652QBVCP/imagen-2026-08-12-073107172.png" 
+                data-spawn-artist="zetahatcat" 
+                data-card-artist="zetahatcat"
+                data-regime="Monarchy" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/652QBVCP/imagen-2026-08-12-073107172.png" alt="Russian Empire">
+                </div>
+                <div class="ball-name">Russian Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">zetahatcat</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">zetahatcat</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Napoleonic France" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/PfctVL0c/7223A8D8-2DFB-4197-A784-C1C8F33D14B5.png" 
+                data-spawn-artist="idiotevanstickman" 
+                data-card-artist="idiotevanstickman"
+                data-regime="Monarchy" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/PfctVL0c/7223A8D8-2DFB-4197-A784-C1C8F33D14B5.png" alt="Napoleonic France">
+                </div>
+                <div class="ball-name">Napoleonic France</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">idiotevanstickman</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">idiotevanstickman</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Holy Roman Empire" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/QdFRVQVj/imagen-2026-08-22-192356431.png" 
+                data-spawn-artist="zetahatcat" 
+                data-card-artist="zetahatcat"
+                data-regime="Holy Roman Empire" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/QdFRVQVj/imagen-2026-08-22-192356431.png" alt="Holy Roman Empire">
+                </div>
+                <div class="ball-name">Holy Roman Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">peligrosamente</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Han Dynasty" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/NMZjX5cJ/image.png" 
+                data-spawn-artist="perilouspokey" 
+                data-card-artist="zetahatcat"
+                data-regime="Chinese Dynasty" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/NMZjX5cJ/image.png" alt="Han Dynasty">
+                </div>
+                <div class="ball-name">Han Dynasty</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+            <div class="ball-card" 
+                data-name="Abbasid Caliphate" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/8CwBLm8F/imagen-2026-09-11-023918587.png" 
+                data-spawn-artist="perilouspokey" 
+                data-card-artist="zetahatcat"
+                data-regime="Caliphate" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/8CwBLm8F/imagen-2026-09-11-023918587.png" alt="Abbasid Caliphate">
+                </div>
+                <div class="ball-name">Abbasid Caliphate</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+<div class="ball-card"
+    data-name="German Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/xCN09nzt/imagen-2026-08-12-073502647.png"
+    data-spawn-artist="perilouspokey"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/xCN09nzt/imagen-2026-08-12-073502647.png" alt="German Empire">
+    </div>
+    <div class="ball-name">German Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Macedonian Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/V6tc34y8/Macedon-Empire.png"
+    data-spawn-artist="perilouspokey"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/V6tc34y8/Macedon-Empire.png" alt="Macedonian Empire">
+    </div>
+    <div class="ball-name">Macedonian Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Carolingian Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/0j5cp207/imagen-2026-08-12-073918016.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/0j5cp207/imagen-2026-08-12-073918016.png" alt="Carolingian Empire">
+    </div>
+    <div class="ball-name">Carolingian Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Rashidun Caliphate"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/pTRNW7bq/nt-zs-AENx-RBc-PBLvcg.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Caliphate"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/pTRNW7bq/nt-zs-AENx-RBc-PBLvcg.png" alt="Rashidun Caliphate">
+    </div>
+    <div class="ball-name">Rashidun Caliphate</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Seljuk Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/sDzh1MxV/imagen-2026-09-12-012224075.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Sultanate"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/sDzh1MxV/imagen-2026-09-12-012224075.png" alt="Seljuk Empire">
+    </div>
+    <div class="ball-name">Seljuk Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Western Roman Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/hG7wjj2t/Western-Roman-Empire-Spawnart-Latindex.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/hG7wjj2t/Western-Roman-Empire-Spawnart-Latindex.png" alt="Western Roman Empire">
+    </div>
+    <div class="ball-name">Western Roman Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card" 
+                data-name="Ottoman Empire" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/NMBJ8mGp/Ottoman-Empire.png" 
+                data-spawn-artist="perilouspokey" 
+                data-card-artist="zetahatcat"
+                data-regime="Sultanate" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/NMBJ8mGp/Ottoman-Empire.png" alt="Ottoman Empire">
+                </div>
+                <div class="ball-name">Ottoman Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">Franci#5323</span></div>
+                </div>
+            </div>
+
+<div class="ball-card"
+    data-name="Kamakura Shogunate"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/wMvnkqTL/imagen-2026-09-12-012816446.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Shogunate"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/wMvnkqTL/imagen-2026-09-12-012816446.png" alt="Kamakura Shogunate">
+    </div>
+    <div class="ball-name">Kamakura Shogunate</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Kingdom Of Prussia"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/bNSBYFGr/imagen-2026-09-12-013045520.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/bNSBYFGr/imagen-2026-09-12-013045520.png" alt="Kingdom Of Prussia">
+    </div>
+    <div class="ball-name">Kingdom Of Prussia</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Polish-Lithuanian Commonwealth"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/mDFmZPkB/imagen-2026-09-12-013653838.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Royal Union"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/mDFmZPkB/imagen-2026-09-12-013653838.png" alt="Polish-Lithuanian Commonwealth">
+    </div>
+    <div class="ball-name">Polish-Lithuanian Commonwealth</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Japanese Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/26nqYL4S/imagen-2026-08-22-193840871.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/26nqYL4S/imagen-2026-08-22-193840871.png" alt="Japanese Empire">
+    </div>
+    <div class="ball-name">Japanese Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Joseon Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/1XsDxXNp/imagen-2026-09-12-014040984.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/1XsDxXNp/imagen-2026-09-12-014040984.png" alt="Joseon Dynasty">
+    </div>
+    <div class="ball-name">Joseon Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Kayar Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/ZKcxSGZj/imagen-2026-09-12-044610041.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/ZKcxSGZj/imagen-2026-09-12-044610041.png" alt="Kayar Dynasty">
+    </div>
+    <div class="ball-name">Kayar Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Tokugawa Shogunate"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/rszMp63m/imagen-2026-09-12-045243958.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Shogunate"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/rszMp63m/imagen-2026-09-12-045243958.png" alt="Tokugawa Shogunate">
+    </div>
+    <div class="ball-name">Tokugawa Shogunate</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Austro-Hungarian Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/7PGw24b3/imagen-2026-09-12-054317908.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Royal Union"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/7PGw24b3/imagen-2026-09-12-054317908.png" alt="Austro-Hungarian Empire">
+    </div>
+    <div class="ball-name">Austro-Hungarian Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+
+<div class="ball-card"
+    data-name="Achaemenid Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/fR3c4Jb9/Achaemenid-Empire.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/fR3c4Jb9/Achaemenid-Empire.png" alt="Achaemenid Empire">
+    </div>
+    <div class="ball-name">Achaemenid Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Safavid Persia"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/Z5HD9nNN/safavid-empire.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/Z5HD9nNN/safavid-empire.png" alt="Safavid Persia">
+    </div>
+    <div class="ball-name">Safavid Persia</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card" 
+                data-name="Byzantine Empire" 
+                data-group="Legendary"
+                data-card-img="https://via.placeholder.com/400x550/2a3143/ffffff?text=Achaemenid+Card"
+                data-spawn-img="https://i.postimg.cc/5tsbwNBW/imagen-2026-09-12-055955957.png" 
+                data-spawn-artist="idiotevanstickman" 
+                data-card-artist="idiotevanstickman"
+                data-regime="Monarchy" 
+                data-hp="1600" 
+                data-atk="1200" 
+                data-ability="Remove Greek! Deals x2 damage on Greek states."
+                onclick="openDetail(this)">
+                <div class="img-box">
+                    <img src="https://i.postimg.cc/5tsbwNBW/imagen-2026-09-12-055955957.png" alt="Byzantine Empire">
+                </div>
+                <div class="ball-name">Byzantine Empire</div>
+                <div class="artist-info">
+                    <div class="artist-row"><span class="label">Spawn</span> <span class="artist">idiotevanstickman</span></div>
+                    <div class="artist-row"><span class="label">Card</span> <span class="artist">idiotevanstickman</span></div>
+                </div>
+            </div>
+
+<div class="ball-card"
+    data-name="Austrian Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/d1733Tz5/imagen-2026-09-12-060134548.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/d1733Tz5/imagen-2026-09-12-060134548.png" alt="Austrian Empire">
+    </div>
+    <div class="ball-name">Austrian Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Great Yuan"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/8PTGn6tx/63-sin-titulo-20260704153330.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/8PTGn6tx/63-sin-titulo-20260704153330.png" alt="Great Yuan">
+    </div>
+    <div class="ball-name">Great Yuan</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Sassanid Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/bv9Hg4J9/image.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/bv9Hg4J9/image.png" alt="Sassanid Empire">
+    </div>
+    <div class="ball-name">Sassanid Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Mamluk Sultanate"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/pLYFMzHh/imagen-2026-09-12-061344301.png"
+    data-spawn-artist="zetahatcat"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Sultanate"
+    data-hp="1400"
+    data-atk="1150"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/pLYFMzHh/imagen-2026-09-12-061344301.png" alt="Mamluk Sultanate">
+    </div>
+    <div class="ball-name">Mamluk Sultanate</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">perilouspokey</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Kalmar Union"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/8zBy5ZWT/Kalmar-Union.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Nordic"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/8zBy5ZWT/Kalmar-Union.png" alt="Kalmar Union">
+    </div>
+    <div class="ball-name">Kalmar Union</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Mughal Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/6qrZ0mtg/imagen-2026-09-12-062054107.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/6qrZ0mtg/imagen-2026-09-12-062054107.png" alt="Mughal Empire">
+    </div>
+    <div class="ball-name">Mughal Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Kingdom of Italy"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/CxPqmDpq/imagen-2026-09-12-062155930.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/CxPqmDpq/imagen-2026-09-12-062155930.png" alt="Kingdom of Italy">
+    </div>
+    <div class="ball-name">Kingdom of Italy</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Timurid Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/Y027ndFV/imagen-2026-09-12-094026689.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/Y027ndFV/imagen-2026-09-12-094026689.png" alt="Timurid Empire">
+    </div>
+    <div class="ball-name">Timurid Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Hunnic Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/bv5rDDZF/imagen-2026-09-12-124838678.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/bv5rDDZF/imagen-2026-09-12-124838678.png" alt="Hunnic Empire">
+    </div>
+    <div class="ball-name">Hunnic Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="First French Colonial Empire"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/nzvxFCBX/imagen-2026-09-12-125026531.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/nzvxFCBX/imagen-2026-09-12-125026531.png" alt="First French Colonial Empire">
+    </div>
+    <div class="ball-name">First French Colonial Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Seleucid Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/y8Jw6DCf/imagen-2026-09-12-125154421.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/y8Jw6DCf/imagen-2026-09-12-125154421.png" alt="Seleucid Empire">
+    </div>
+    <div class="ball-name">Seleucid Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Swedish Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/1XjJbKXn/imagen-2026-09-12-125253001.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/1XjJbKXn/imagen-2026-09-12-125253001.png" alt="Swedish Empire">
+    </div>
+    <div class="ball-name">Swedish Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Mali Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/0jT7pXrw/imagen-2026-09-12-125424863.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/0jT7pXrw/imagen-2026-09-12-125424863.png" alt="Mali Empire">
+    </div>
+    <div class="ball-name">Mali Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Fatimid Caliphate"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/kM6YLBWd/imagen-2026-09-12-125619341.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Caliphate"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/kM6YLBWd/imagen-2026-09-12-125619341.png" alt="Fatimid Caliphate">
+    </div>
+    <div class="ball-name">Fatimid Caliphate</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Zhou Dynasty"
+    data-group="Epic"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/fbVYk0zk/imagen-2026-09-12-125936633.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/fbVYk0zk/imagen-2026-09-12-125936633.png" alt="Zhou Dynasty">
+    </div>
+    <div class="ball-name">Zhou Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Tsardom Of Russia"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/kGFPP4L7/imagen-2026-09-12-142237531.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/kGFPP4L7/imagen-2026-09-12-142237531.png" alt="Tsardom Of Russia">
+    </div>
+    <div class="ball-name">Tsardom Of Russia</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Aztec Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/pVQwTmc6/imagen-2026-09-12-142501463.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/pVQwTmc6/imagen-2026-09-12-142501463.png" alt="Aztec Empire">
+    </div>
+    <div class="ball-name">Aztec Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Golden Horde"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/tgVfHJVP/imagen-2026-09-12-142618549.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Mongol Khanate"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/tgVfHJVP/imagen-2026-09-12-142618549.png" alt="Golden Horde">
+    </div>
+    <div class="ball-name">Golden Horde</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Qajar Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/BbN7C1dq/imagen-2026-09-12-142718771.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Persia"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/BbN7C1dq/imagen-2026-09-12-142718771.png" alt="Qajar Dynasty">
+    </div>
+    <div class="ball-name">Qajar Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Xia Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/YqqKQ7hN/Xia-Dynasty.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Chinese Dynasty"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/YqqKQ7hN/Xia-Dynasty.png" alt="Xia Dynasty">
+    </div>
+    <div class="ball-name">Xia Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Wu Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/mgJvxF8Z/imagen-2026-09-12-174448496.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Chinese Dynasty"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/mgJvxF8Z/imagen-2026-09-12-174448496.png" alt="Wu Dynasty">
+    </div>
+    <div class="ball-name">Wu Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Serbian Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/RZ6YTZ9G/Untitled732-20250417115452.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/RZ6YTZ9G/Untitled732-20250417115452.png" alt="Serbian Empire">
+    </div>
+    <div class="ball-name">Serbian Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Jinn Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/L6hQH8Jb/Jurchen-Jin.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Chinese Dynasty"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/L6hQH8Jb/Jurchen-Jin.png" alt="Jinn Dynasty">
+    </div>
+    <div class="ball-name">Jinn Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Goguryeo Dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/851wxp8x/Goguryeo.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/851wxp8x/Goguryeo.png" alt="Goguryeo Dynasty">
+    </div>
+    <div class="ball-name">Goguryeo Dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Kingdom of Greece"
+    data-group="Common"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/KvdfxrSK/Kingdom-of-Greecebal-Made-By-Taha-Banoglu.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Régimen / Imperio"
+    data-hp="1000"
+    data-atk="800"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/KvdfxrSK/Kingdom-of-Greecebal-Made-By-Taha-Banoglu.png" alt="Kingdom of Greece">
+    </div>
+    <div class="ball-name">Kingdom of Greece</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Merovingian dynasty"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/FzgVFwjZ/imagen-2026-09-12-194858929.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/FzgVFwjZ/imagen-2026-09-12-194858929.png" alt="Merovingian dynasty">
+    </div>
+    <div class="ball-name">Merovingian dynasty</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Rarity</span> <span class="artist">41.0</span></div>
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+<div class="ball-card"
+    data-name="Angevin Empire"
+    data-group="Rare"
+    data-card-img="URL_DE_IMAGEN_CARTA"
+    data-spawn-img="https://i.postimg.cc/d1yB9Vhm/imagen-2026-09-13-101658694.png"
+    data-spawn-artist="NombreArtistaSpawn"
+    data-card-artist="NombreArtistaCarta"
+    data-regime="Monarchy"
+    data-hp="1200"
+    data-atk="1000"
+    data-ability="Descripción de la habilidad aquí."
+    onclick="openDetail(this)">
+    <div class="img-box">
+        <img src="https://i.postimg.cc/d1yB9Vhm/imagen-2026-09-13-101658694.png" alt="Angevin Empire">
+    </div>
+    <div class="ball-name">Angevin Empire</div>
+    <div class="artist-info">
+        <div class="artist-row"><span class="label">Rarity</span> <span class="artist">41.0</span></div>
+        <div class="artist-row"><span class="label">Spawn</span> <span class="artist">NombreArtistaSpawn</span></div>
+        <div class="artist-row"><span class="label">Card</span> <span class="artist">NombreArtistaCarta</span></div>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+
+    <!-- DETAIL VIEW -->
+    <div id="detail-view">
+        <div class="detail-top-header">
+            <h1 class="detail-header" id="detail-title">GREATER OTTOMAN EMPIRE</h1>
+            <p class="detail-subtitle">Spawn artwork, card artwork and credited artists for both.</p>
+
+            <div class="detail-actions">
+                <button class="back-btn" onclick="closeDetail()">← All Dynastyballs</button>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <div class="detail-left">
+                <div class="image-box card-box">
+                    <div class="image-box-label">CARD ARTWORK</div>
+                    <div class="img-wrapper">
+                        <img id="detail-card-img" src="" alt="Card Artwork">
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-right">
+                <div class="image-box spawn-box">
+                    <div class="img-wrapper">
+                        <img id="detail-spawn-img" src="" alt="Spawn Artwork">
+                    </div>
+                    <div class="image-box-label bottom-label">SPAWN ARTWORK</div>
+                </div>
+
+                <div class="info-table">
+                    <div class="info-row">
+                        <span class="info-label">SPAWN ART</span>
+                        <span class="info-value link-style" id="detail-spawn-artist">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">CARD ART</span>
+                        <span class="info-value link-style" id="detail-card-artist">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">REGIME</span>
+                        <span class="info-value" id="detail-regime">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">GROUP</span>
+                        <span class="info-value" id="detail-group">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">STATS</span>
+                        <span class="info-value">HP <span id="detail-hp">0</span> • ATK <span id="detail-atk">0</span></span>
+                    </div>
+                    <div class="info-row ability-row">
+                        <span class="info-label">ABILITY</span>
+                        <div class="info-value ability-content">
+                            <div class="ability-title" id="detail-ability-title">-</div>
+                            <div class="ability-desc" id="detail-ability-desc">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="wiki.js"></script>
+</body>
+</html>
